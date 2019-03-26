@@ -8,33 +8,11 @@
       </slot>
     </div>
     <div class="wizard-navigation">
-      <div class="wizard-progress-with-circle" v-if="!isVertical">
-        <div class="wizard-progress-bar"
-             :style="progressBarStyle"></div>
-      </div>
-      <ul class="wizard-nav wizard-nav-pills" role="tablist" :class="stepsClasses">
-        <slot name="step" v-for="(tab, index) in tabs"
-              :tab="tab"
-              :index="index"
-              :navigate-to-tab="navigateToTab"
-              :step-size="stepSize"
-              :transition="transition">
-          <wizard-step :tab="tab"
-                       :step-size="stepSize"
-                       @click.native="navigateToTab(index)"
-                       @keyup.enter.native="navigateToTab(index)"
-                       :transition="transition"
-                       :index="index">
-          </wizard-step>
-        </slot>
-      </ul>
-      <div class="wizard-tab-content">
+       <div class="wizard-tab-content">
         <slot v-bind="slotProps">
         </slot>
       </div>
-    </div>
-
-    <div class="wizard-card-footer clearfix" v-if="!hideButtons">
+       <div class="wizard-card-footer clearfix" v-if="!hideButtons">
       <slot name="footer"
             v-bind="slotProps">
         <div class="wizard-footer-left">
@@ -69,6 +47,28 @@
         </div>
 
       </slot>
+    </div>
+      <div class="wizard-progress-with-circle" v-if="!isVertical">
+        <div class="wizard-progress-bar"
+             :style="progressBarStyle"></div>
+      </div>
+      <ul class="wizard-nav wizard-nav-pills" role="tablist" :class="stepsClasses">
+        <slot name="step" v-for="(tab, index) in tabs"
+              :tab="tab"
+              :index="index"
+              :navigate-to-tab="navigateToTab"
+              :step-size="stepSize"
+              :transition="transition">
+          <wizard-step :tab="tab"
+                       :step-size="stepSize"
+                       @click.native="navigateToTab(index)"
+                       @keyup.enter.native="navigateToTab(index)"
+                       :transition="transition"
+                       :index="index">
+          </wizard-step>
+        </slot>
+      </ul>
+     
     </div>
   </div>
 </template>
