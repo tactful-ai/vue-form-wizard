@@ -2,7 +2,7 @@
 @import "variables";
 
 .vue-form-wizard {
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   .is_error {
     border-color: $danger-states-color !important;
     .icon-container {
@@ -60,7 +60,8 @@
 
   .wizard-tab-content {
     min-height: 70vh;
-    padding: 30px 20px 10px;
+    text-align: center;
+    padding-top: 30px;
   }
 
   .wizard-header {
@@ -68,6 +69,7 @@
     position: relative;
     border-radius: 3px 3px 0 0;
     text-align: center;
+    margin-top:10px;
   }
 
   .wizard-title {
@@ -106,6 +108,7 @@
   }
   .wizard-card-footer {
     padding: 0 20px;
+    margin-bottom: 33px;
     .wizard-footer-left {
       float: left;
     }
