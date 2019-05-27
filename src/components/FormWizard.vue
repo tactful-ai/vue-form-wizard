@@ -220,7 +220,7 @@
       progress () {
         let percentage = 0
         if (this.activeTabIndex > 0) {
-          let stepsToAdd = 1
+          let stepsToAdd = 1.5
           let stepMultiplier = 2
           percentage = this.stepPercentage * ((this.activeTabIndex * stepMultiplier) + stepsToAdd)
         } else {
