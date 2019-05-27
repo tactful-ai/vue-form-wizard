@@ -201,7 +201,7 @@
         return this.activeTabIndex !== 0
       },
       stepPercentage () {
-        return 1 / (this.tabCount * 3) * 100
+        return 1 / (this.tabCount * 2) * 100
       },
       progressBarStyle () {
         return {
